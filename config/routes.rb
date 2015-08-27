@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  root "static_pages#home" #controller that we want is static_pages, then go to home method.
+
+  get "/about", to: "static_pages#about", as: "about" #url is /about, go to static_pages controller and use about method, as creates a shortcut that we can use
+
   resources :posts
 
   
